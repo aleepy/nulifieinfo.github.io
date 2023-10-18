@@ -1,0 +1,291 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Set the background color and text color */
+body {
+    background-color: #000000;
+    color: #ffffff40;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    position: relative; /* Добавляем относительное позиционирование для наложения слоя с цветом */
+}
+
+
+h1 {
+    font-family: "Pixel Digivolve Cyrillic", sans-serif;
+}
+
+
+
+p {
+    font-family: "Pixel Digivolve Cyrillic", sans-serif;
+}
+
+
+/* Set the background image with dark overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('12.jpg'); /* Путь к вашей фотографии */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Фиксируем фон, чтобы он растягивался на всю высоту экрана */
+    opacity: 0.3; /* Прозрачность 20% для затемнения */
+    z-index: -1; 
+}
+
+/* ... (остальной CSS код) */
+
+
+header {
+    background-color: rgba(0, 0, 0, 0.623);
+    transition: color 0.6s ease;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: color 0.3s;
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы хедера по краям */
+    align-items: center; /* Выравниваем элементы вертикально по центру */
+}
+
+.header-hidden {
+    top: -100px; /* Вы можете настроить значение на ваш выбор */
+    transition: top 0.3s ease;
+}
+
+/* Добавляем стили для логотипа */
+.logo {
+    display: inline-block;
+    vertical-align: top; /* Выравниваем логотип по верхнему краю */
+    max-height: 40px; /* Устанавливаем максимальную высоту логотипа */
+}
+
+/* Выравниваем текст и гиперссылки по центру */
+nav ul {
+    list-style: none;
+    text-align: center; /* Выравниваем гиперссылки и текст по центру */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold; /* Используем жирный шрифт */
+    transition: color 0.3s ease;
+    /* Добавляем тень */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+nav ul {
+    list-style: none;
+    text-align: center; /* Выравниваем гиперссылки по центру */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold; /* Используем жирный шрифт */
+    transition: color 0.3s ease;
+    /* Добавляем тень */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+}
+
+nav a:hover {
+    color: #8000ff;
+}
+
+/* Style the hero section */
+#hero {
+    background-image: url('minecraft-background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero h1 {
+    font-size: 70px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Додаємо тінь тексту */
+}
+
+#hero p {
+    font-size: 25px;
+    margin-top: 20px;
+    color: #ff00e6;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); /* Додаємо тінь тексту */
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 15px 27px;
+    background-color: #ff00bb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+    /* Добавляем тень */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "SF", sans-serif; /* Використовуємо шрифт "SF" для цього елемента */
+}
+
+@font-face {
+    font-family: "SF";
+    src: url("SFUIDISPLAY-SEMIBOLD.TTF") format("truetype");
+}
+
+
+.btn:hover {
+    background-color: #9122ff;
+}
+
+/* Add your feature section styling here */
+
+/* Style the footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0; /* Прикрепляем футер к нижней части окна браузера */
+    left: 0;
+    right: 0;
+}
+
+.footer-hidden {
+    bottom: -100px; /* Вы можете настроить значение на ваш выбор */
+    transition: bottom 0.3s ease;
+}
+
+.social-icons {
+    margin-top: 10px; /* Уменьшаем отступ от верхней грани футера */
+    display: flex;
+    justify-content: center; /* Выравниваем иконки по центру горизонтально */
+    align-items: center; /* Выравниваем иконки по центру вертикально */
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+@font-face {
+    font-family: "Pixel Digivolve Cyrillic";
+    src: url("3997-font (1).otf") format("truetype");
+}
+
+/* Стили для секции с фотографиями */
+#photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    padding: 40px 0;
+}
+
+/* Стили для фотографий (замените цвет фона на ваш выбор) */
+.photo {
+    position: relative;
+    margin: 0 10px; /* Небольшое расстояние между фотографиями */
+    width: 200px; /* Ширина фотографии */
+    height: 400px; /* Высота фотографии (вертикально вытянутый прямоугольник) */
+    border-radius: 15px; /* Закругленные углы */
+    background-color: #e9e9e9; /* Замените цвет фона на ваш выбор */
+    overflow: hidden; /* Обрезаем контент, который выходит за пределы фотографии */
+}
+
+/* Стили для затемнения (overlay) по умолчанию */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.448); /* Слабое затемнение по умолчанию */
+    opacity: 1; /* Изначально полностью видимо */
+    transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+}
+
+/* При наведении на фотографию делаем затемнение полностью прозрачным */
+.photo:hover .overlay {
+    background-color: rgba(246, 246, 246, 0); /* Полностью без затемнения при наведении */
+    opacity: 0; /* Затемнение становится полностью прозрачным при наведении */
+}
+
+
+header, footer {
+    transition: transform 0.3s ease;
+}
+
+/* Установите начальные значения для хедера и футера */
+header, footer {
+    transform: translateY(0);
+}
+
+
+body {
+    font-size: 16px; /* Размер шрифта для базового текста */
+}
+
+img {
+    max-width: 100%; /* Изображения будут масштабироваться в соответствии с размером контейнера */
+}
+
+
+
+.section p {    
+    text-align: left;
+    font-family: "SF", sans-serif;
+}
+
+
+.custom-ul ul {    
+    font-family: "SF", sans-serif;
+}

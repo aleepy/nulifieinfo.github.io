@@ -1,0 +1,315 @@
+body, h1, h2, h3, p, p1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+
+
+.dialog {
+    display: flex;
+    font-size: 25px; 
+    font-family: "Ostap huisos", sans-serif;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #b7b7b76e;
+}
+
+
+.content {
+    margin-top: 100px; 
+}
+
+.section {
+    max-width: 700px;
+    margin: 60px;
+    padding: 0px;
+}
+
+
+
+h1::before {
+    content: ""; 
+    display: block; 
+    height: 100px; 
+    
+}
+
+
+h1 {
+    color: #ffcc00; 
+    font-size: 45px;
+}
+
+
+ul.custom-ul {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+ul.custom-ul li {
+    margin-bottom: 10px;
+}
+
+
+
+.section p {    
+    margin-top: 10px;
+    text-align: left;
+    font-size: 30px;
+    font-family: "Ostap huisos", sans-serif;
+    line-height: 1.0;
+}
+
+
+.custom-ul ul {    
+    font-family: "Ostap huisos", sans-serif;
+}
+
+h1 {
+    font-family: "Pixel Digivolve Cyrillic", sans-serif;
+}
+
+li {
+    font-family: "SF", sans-serif;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('12.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.603);
+    transition: color 0.6s ease;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: color 0.3s;
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы хедера по краям */
+    align-items: center; /* Выравниваем элементы вертикально по центру */
+}
+
+
+.content {
+    margin-top: 150px; /* Устанавливаем отступ сверху, равный высоте хедера */
+}
+
+
+.header-hidden {
+    top: -100px; /* Вы можете настроить значение на ваш выбор */
+    transition: top 0.3s ease;
+}
+
+/* Добавляем стили для логотипа */
+.logo {
+    display: inline-block;
+    vertical-align: top; /* Выравниваем логотип по верхнему краю */
+    max-height: 40px; /* Устанавливаем максимальную высоту логотипа */
+}
+
+/* Выравниваем текст и гиперссылки по центру */
+nav ul {
+    list-style: none;
+    text-align: center; /* Выравниваем гиперссылки и текст по центру */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+nav a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+}
+
+nav a:hover {
+    color: #8000ff;
+}
+
+
+
+
+
+footer {
+    background-color: rgba(0, 0, 0, 0.26);
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0; /* Прикрепляем футер к нижней части окна браузера */
+    left: 0;
+    right: 0;
+}
+
+.footer-hidden {
+    bottom: -100px; /* Вы можете настроить значение на ваш выбор */
+    transition: bottom 0.3s ease;
+}
+
+.social-icons {
+    margin-top: 10px; /* Уменьшаем отступ от верхней грани футера */
+    display: flex;
+    justify-content: center; /* Выравниваем иконки по центру горизонтально */
+    align-items: center; /* Выравниваем иконки по центру вертикально */
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+header, footer {
+    transition: transform 0.3s ease;
+}
+
+/* Установите начальные значения для хедера и футера */
+header, footer {
+    transform: translateY(0);
+}
+
+
+
+
+@font-face {
+    font-family: "Pixel Digivolve Cyrillic";
+    src: url("3997-font (1).otf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "SF";
+    src: url("SFUIDISPLAY-SEMIBOLD.TTF") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Ostap huisos";
+    src: url("Nihonium113.ttf") format("truetype");
+}
+
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Займає 100% шириною екрану на мобільних пристроях */
+    height: 100%; /* Займає 100% висоти екрану на мобільних пристроях */
+    background-color: rgba(0, 0, 0, 0.7); /* Сірий колір з невеликою прозорістю */
+    z-index: -1; /* Отправляє підложку за вміст сторінки */
+}
+
+
+
+.custom-ul {
+    padding-left: 2em; /* Используем относительную единицу измерения (em) для отступа слева */
+    margin-top: 2em; /* Используем относительную единицу измерения (em) для отступа сверху */
+}
+
+.section {
+    max-width: 50em; /* Используем относительную единицу измерения (em) для максимальной ширины */
+    margin: 3em; /* Используем относительную единицу измерения (em) для отступов */
+}
+Z
+.section h1 {
+    font-size: 10em; /* Используем относительную единицу измерения (em) для размера шрифта заголовка */
+}
+
+h1.custom-h1 {
+    font-size: 60px;
+    color: #00aeff;
+    font-family: "Pixel Digivolve Cyrillic", sans-serif;
+    margin-top: 50px;
+}
+
+
+
+
+.minecraft-hero {
+    height: 150vh;
+    width: 150vw;
+    position: fixed;
+    top: 40px;
+    left: 100px;
+    z-index: 0;
+}
+
+.minecraft-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.map {
+    text-align: center;
+}
+
+.map img {
+    max-width: 500px; /* Устанавливаем максимальную ширину изображения в 500 пикселей */
+    height: auto; /* Позволяет изображению подстраивать высоту автоматически, сохраняя пропорции */
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+
+
+p {
+    font-family: "Pixel Digivolve Cyrillic", sans-serif;
+}
+
+.neckro {
+    text-align: center; /* Выравниваем содержимое по центру */
+    margin-top: 50px;
+}
+
+.neckro img {
+    max-width: 80%; /* Устанавливаем максимальную ширину изображения в 100% от родительского контейнера */
+    border-radius: 15px;
+    height: auto; /* Позволяет изображению подстраивать высоту автоматически, сохраняя пропорции */
+}
+
+
+
+
+
